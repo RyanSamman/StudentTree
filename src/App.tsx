@@ -77,6 +77,8 @@ function App() {
       <Canvas
         nodes={nodes}
         edges={edges}
+        width={window.innerWidth}
+        height={window.innerHeight}
         node={(props) => <Node {...props} onClick={_ => handleChangeStudent(props.properties?.data)} />}
         edge={(props) => <Edge {...props} onClick={_ => setStudent(undefined)} />}
       />
