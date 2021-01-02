@@ -14,26 +14,46 @@ const studentNodes: NodeData<Student>[] = students.map(s => (
 const studentEdges: EdgeData[] = students.map(s => (
   {
     id: `${s.major}-${s.name}`,
-    from: s.major,
-    to: s.name,
+    from: s.major+s.year,
+    to: s.name
   }
 ))
 
 const nodes: NodeData<Student | undefined>[] = [
   {
     id: 'FCIT',
-    text: 'FCIT20',
+    text: 'FCIT'
   },
   {
-    id: 'IT',
+    id: 'FCIT18',
+    text: 'FCIT18'
+  },
+  {
+    id: 'FCIT20',
+    text: 'FCIT20'
+  },
+  {
+    id: 'IT18',
     text: 'Information Technology'
   },
   {
-    id: 'IS',
+    id: 'IS18',
     text: 'Information Systems'
   },
   {
-    id: 'CS',
+    id: 'CS18',
+    text: 'Computer Science'
+  },
+  {
+    id: 'IT20',
+    text: 'Information Technology'
+  },
+  {
+    id: 'IS20',
+    text: 'Information Systems'
+  },
+  {
+    id: 'CS20',
     text: 'Computer Science'
   },
   ...studentNodes
@@ -41,19 +61,44 @@ const nodes: NodeData<Student | undefined>[] = [
 
 const edges: EdgeData[] = [
   {
-    id: 'FCIT-IT',
+    id: 'FCIT-FCIT18',
     from: 'FCIT',
-    to: 'IT',
+    to: 'FCIT18'
   },
   {
-    id: 'FCIT-IS',
+    id: 'FCIT-FCIT20',
     from: 'FCIT',
-    to: 'IS'
+    to: 'FCIT20'
   },
   {
-    id: 'FCIT-CS',
-    from: 'FCIT',
-    to: 'CS'
+    id: 'FCIT18-IT',
+    from: 'FCIT18',
+    to: 'IT18'
+  },
+  {
+    id: 'FCIT18-IS',
+    from: 'FCIT18',
+    to: 'IS18'
+  },
+  {
+    id: 'FCIT18-CS',
+    from: 'FCIT18',
+    to: 'CS18'
+  },
+  {
+    id: 'FCIT20-IT',
+    from: 'FCIT20',
+    to: 'IT20'
+  },
+  {
+    id: 'FCIT20-IS',
+    from: 'FCIT20',
+    to: 'IS20'
+  },
+  {
+    id: 'FCIT20-CS',
+    from: 'FCIT20',
+    to: 'CS20'
   },
   ...studentEdges
 ];

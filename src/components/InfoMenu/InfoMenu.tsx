@@ -37,7 +37,8 @@ const InfoMenu: FC<InfoMenuProps> = ({ student, setStudent, style = defaultMenuS
 	return (
 		<div id="InfoMenu" ref={menuElement} style={style}>
 			<h1>{student.name}</h1>
-			<h2>{student.major}</h2>
+			<h2>FCIT{student.year}</h2>
+			<h3>{student.major}</h3>
 			{student.title ? <h3>{student.title}</h3> : null}
 			<div style={{ display: "flex" }}>
 				{
